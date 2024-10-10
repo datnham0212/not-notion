@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  background-image: url('../img/peakpx.jpg');
+}
+
+.half {
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7%;
+  left: 0;
+  position: fixed;
+}
+
+
+.right {
+  width: 93%;
+  right:0;
+  position: fixed;
+}
+
+section {
+  padding: 50px;
+  display: none;
+}
+
+section:first-of-type {
+  border-bottom: block;
+}

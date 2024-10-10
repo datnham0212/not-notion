@@ -1,0 +1,83 @@
+#todo-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.todo-frame {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-180%);
+    width: 1000px;
+    height: 20%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom: transparent;
+    background: rgba(255, 255, 255, 0.21);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+}
+
+.list-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 1000px;
+    height: 55vh;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: transparent;
+    border-end-end-radius: 16px;
+    border-bottom-left-radius: 16px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.21);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+}
+
+#task-input {
+    font-size: larger;
+    width: 500px;
+    height: 50px;
+}
+
+#task-button {
+    background-color: limegreen;
+    width: 2cm;
+    height: 1cm;
+    margin-left: 0.8cm;
+    cursor: pointer;
+}
+
+#no_of_task {
+    margin-left: 1.5cm;
+}
+
+/* li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5cm;
+    padding-left: 0.25cm;
+    border: 2px solid black;
+    width: 96%;
+    height: 50px;
+    border-radius: 20px;
+} */
+
+#remove-button {
+    width: 2cm;
+    height: 1cm;
+    position: absolute;
+    transform: translateX(30cm);
+    cursor: pointer;
+}
+
+
