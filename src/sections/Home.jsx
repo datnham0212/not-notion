@@ -1,8 +1,8 @@
 import React from 'react';
-import './static/Calculator.css'
+import './static/Home.css'
 
 
-const Timetable = () => {
+const Home= () => {
   return (
     <div>
       <h1>TimeTable</h1>
@@ -10,4 +10,4 @@ const Timetable = () => {
   );
 };
 
-export default Timetable; 
+export default Home; 
