@@ -36,7 +36,7 @@ const Section = ({ id, isVisible }) => {
 
 
 function App() {
-  const [visibleSection, setVisibleSection] = useState('todo');
+  const [visibleSection, setVisibleSection] = useState('home');
 
   const handleSectionClick = (event, sectionId) => {
     event.preventDefault();
@@ -48,6 +48,7 @@ function App() {
       <Sidebar onSectionClick={handleSectionClick} activeSection={visibleSection}/>
       <div className="right half">
         <main>
+          <Section id="home" isVisible={visibleSection === 'home'} />
           <Section id="todo" isVisible={visibleSection === 'todo'} />
           <Section id="notes" isVisible={visibleSection === 'notes'} />
         </main>

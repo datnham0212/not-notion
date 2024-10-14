@@ -3,7 +3,7 @@ import "./static/Todo.css"
 const Todo = () => {
   return (
     <>
-      
+      <div className='todoContainer'></div>
     </>
   );
 };
