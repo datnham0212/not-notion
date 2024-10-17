@@ -1,34 +1,34 @@
 import React from 'react';
 
 const DonutChart = ({ percentage }) => {
-  const radius = 50;
-  const strokeWidth = 15;
+  const radius = 150; 
+  const strokeWidth = 20; 
   const normalizedRadius = radius - strokeWidth * 0.5;
   const circumference = normalizedRadius * 2 * Math.PI;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <svg width="120" height="120">
+    <svg width="300" height="300"> 
       <circle
-        stroke="#e6e6e6"
+        stroke="#e6e6e6" // Background circle color
         fill="transparent"
         strokeWidth={strokeWidth}
         r={normalizedRadius}
-        cx="60"
-        cy="60"
+        cx="150" 
+        cy="150" 
       />
       <circle
-        stroke="#4caf50"
+        stroke="#ff9800" // Orange for completed tasks
         fill="transparent"
         strokeWidth={strokeWidth}
         strokeDasharray={`${circumference} ${circumference}`}
         style={{ strokeDashoffset }}
         r={normalizedRadius}
-        cx="60"
-        cy="60"
+        cx="150" 
+        cy="150" 
       />
-      <text x="50%" y="50%" textAnchor="middle" stroke="#51c5cf" strokeWidth="1px" dy=".3em">
-        {percentage}%
+      <text x="50%" y="50%" textAnchor="middle" stroke="#2196f3" strokeWidth="1px" dy=".3em" fontSize="24" fontFamily="Arial">
+        {percentage.toFixed(0)}% {/* Display percentage */}
       </text>
     </svg>
   );

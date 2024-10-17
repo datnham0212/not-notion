@@ -1,7 +1,13 @@
 import React from 'react';
-import './static/Home.css'
+import './static/Home.css';
+import DonutChart from './dynamic/DonutChart';
 
 const Home= () => {
+
+  const totalTasks = 5;
+  const tasksCompleted = 3;
+  const taskPercentage = (tasksCompleted / totalTasks) * 100;
+
   return (
     <>
       <div className='homeContainer'>
@@ -9,14 +15,14 @@ const Home= () => {
           <div className='overview'>
             <div className='overviewLeft'>
               <div className='totalTasks'>
-                <h2>Total Tasks: </h2>
+                <h2>Total Tasks: {totalTasks}</h2>
               </div>
               <div className='tasksCompleted'>
-                <h2>Tasks Completed: </h2>
+                <h2>Tasks Completed: {tasksCompleted}</h2>
               </div>
             </div>
             <div className='overviewRight'>
-              <div className='percentageDonut' />
+              <DonutChart percentage={taskPercentage} />
             </div>
           </div>
           <div className='dueToday'></div>
